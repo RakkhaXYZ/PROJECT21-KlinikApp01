@@ -1,0 +1,75 @@
+// REGISTER
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+  "name": "Rakha Muhammad Nauval",
+  "email": "rakha@gmail.com",
+  "password": "123",
+  "confPassword": "123",
+  "foto": "nukman.jpg",
+  "nohandphone": "08192090",
+  "role": "dokter",
+  "url":"",
+}
+
+###
+// lOGIN
+POST http://localhost:5000/LoginDokter
+Content-Type: application/json
+
+{
+  "email": "dimas@gmail.com",
+  "password": "123"
+}
+
+###
+// MENAMPILKAN DATA user login
+GET http://localhost:5000/me
+
+###
+// MENAMPILKAN SEMUA DATA USER 
+GET http://localhost:5000/users 
+
+### 
+//LOGOUT
+DELETE http://localhost:5000/logout
+
+###
+// UPDATE USER
+PATCH http://localhost:5000/updateUser/3922bc91-0365-467f-9b74-e3e4abbd4d00
+Content-Type: application/json
+
+{
+  "name": "Nukman telah diedit",
+  "email": "nukman@gmail.com",
+  "password": "1234",
+  "confPassword": "1234",
+  "foto": "nukman.jpg",
+  "nohandphone": "08192090",
+  "role": "dokter"
+}
+
+
+
+### 
+// REGISTER PASIEN
+POST http://localhost:5000/pasien
+Content-Type: application/json
+
+{
+  "name": "Rifansyah",
+  "alamat":"Pasir Koja Kota Bandung",
+  "ttl":"12-10-1998",
+  "nohandphone":"089779018328",
+  "keluhan":"pantat bisul"
+}
+
+###
+// MENAMPILKAN DATA PASIEN 
+GET http://localhost:5000/pasienPerawat
+
+
+###
+// MENAMPILKAN DATA PASIEN ID
+GET http://localhost:5000/pasienDokter
